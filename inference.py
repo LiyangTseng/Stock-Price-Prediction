@@ -26,7 +26,7 @@ def main():
     ID = '0611097'
     submission_filename = '{:02d}{:02d}_{}.txt'.format(month, day, ID)
     
-    num_pastRecord, num_predictRecord = 7, 1
+    num_pastRecord, num_predictRecord = 30, 1
     model_path = 'model'
     model = keras.models.load_model(model_path)
     data_dir = 'Company_Data'
@@ -34,7 +34,7 @@ def main():
                  'GOOG', 'BABA', 'EBAY', 'IBM', 'XLNX', 'TXN', 'NOK', 'TSLA', 'MSFT', 'SNPS']
     prediction_list = []
 
-    print('==========predict adjusted closing price via inference.py==========')
+    print('========== predict adjusted closing price via inference.py ==========')
     for company in company_list:
         stock_data_path = os.path.join(data_dir, company+'.csv')
         stock_data = read_data(stock_data_path)
