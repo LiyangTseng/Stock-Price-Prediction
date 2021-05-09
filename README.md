@@ -9,6 +9,7 @@ Run the command to train the model<br>
 <code>python3 train_model.py </code>
 
 ## Predicting trend of stocks
+Predict the results using pre-trained model
 <code>python3 inference.py </code>
 
 ## Notes
